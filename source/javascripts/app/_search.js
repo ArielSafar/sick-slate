@@ -70,8 +70,9 @@
     if (event.keyCode === 27) searchInput.value = '';
 
     if (searchInput.value) {
+      console.log(index.search(searchInput.value));
       var results = index.search(searchInput.value).filter(function(r) {
-        return r.score > 0.0001;
+        return r.score > 0.00001;
       });
 
       if (results.length) {
