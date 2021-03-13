@@ -82,7 +82,8 @@ $default: auto;
         margin-#{right}: 15px;
     }
     aside {
-        aside:before {
+        &:before {
+            padding-#{right}: 0em;
             padding-#{left}: 0.5em;
         }
         .search-highlight {
@@ -110,6 +111,17 @@ aside {
     text-align: right;
     direction: rtl;
 }
+
+p {
+    $x : &;
+
+    & > code {
+        #{$x} &{
+            text-align: left;
+            direction: ltr;
+        }
+    }
+} 
 
 .toc-wrapper {
     text-align: right;

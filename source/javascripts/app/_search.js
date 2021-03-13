@@ -60,8 +60,8 @@
   }
 
   function search(event) {
-
     var searchInput = $('#input-search')[0];
+    console.log("Search", event, searchInput);
 
     unhighlight();
     searchResults.addClass('visible');
@@ -83,7 +83,7 @@
         highlight.call(searchInput);
       } else {
         searchResults.html('<li></li>');
-        $('.search-results li').text('No Results Found for "' + searchInput.value + '"');
+        $('.search-results li').text('לא נמצאו תוצאות חיפוש בעבור: "' + searchInput.value + '"');
       }
     } else {
       unhighlight();
